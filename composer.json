@@ -1,0 +1,50 @@
+{
+    "name": "smart-dato/php-olc-sdk",
+    "description": "PHP OLC SDK with saloon",
+    "keywords": [
+        "smart-dato",
+        "php-olc-sdk"
+    ],
+    "homepage": "https://github.com/smart-dato/php-olc-sdk",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "SmartDato",
+            "email": "info@smart-dato.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.4",
+        "saloonphp/saloon": "^3.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.0",
+        "laravel/pint": "^1.0",
+        "spatie/ray": "^1.28"
+    },
+    "autoload": {
+        "psr-4": {
+            "SmartDato\\Olc\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SmartDato\\Olc\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+            "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
