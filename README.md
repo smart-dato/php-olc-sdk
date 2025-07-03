@@ -56,6 +56,13 @@ $response = $connector->send(
     )
 );
 
+
+$response = $connector->send(
+    new GetShipmentReturnLabelRequest(
+        value: 'OLS000000000001'
+    )
+);
+
 ```
 
 ## Testing
