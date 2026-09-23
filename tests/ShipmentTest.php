@@ -135,3 +135,16 @@ it('omits content when none is given', function () {
 
     expect($shipment->build())->not->toHaveKey('content');
 });
+
+it('includes insurance in the built payload', function () {
+    $shipment = new ShipmentObject(
+        shipmentType: 'PARCEL',
+        shippingService: 'EC',
+        pickupAddress: new AddressObject(warehouse: 'WH_1'),
+        deliveryAddress: new AddressObject(personName: 'John Doe'),
+        parcels: (new ParcelObjectCollection)->add(new ParcelObject(weight: 2.5)),
+        insurance: 500.0,
+    );
+
+    expect($shipment->build()['insurance'])->toBe(500.0);
+});
