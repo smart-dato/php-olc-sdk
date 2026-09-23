@@ -11,19 +11,19 @@ class OlcConnector extends Connector
     use AcceptsJson;
 
     public function __construct(
-        protected readonly ?string $url = null,
-        protected readonly ?string $token = null,
+        protected readonly string $url,
+        protected readonly string $token,
     ) {}
 
     public function resolveBaseUrl(): string
     {
-        return $this->url ?? config('olc.base_url');
+        return $this->url;
     }
 
     protected function defaultAuth(): TokenAuthenticator
     {
         return new TokenAuthenticator(
-            token: $this->token ?? config('olc.token')
+            token: $this->token
         );
     }
 

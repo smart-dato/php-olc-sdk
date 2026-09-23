@@ -17,8 +17,8 @@ class Olc
     public Connector $connector;
 
     public function __construct(
-        protected readonly ?string $url = null,
-        protected readonly ?string $token = null,
+        protected readonly string $url,
+        protected readonly string $token,
     ) {
         $this->connector = new OlcConnector(
             url: $this->url,
