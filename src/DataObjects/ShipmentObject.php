@@ -2,7 +2,6 @@
 
 namespace SmartDato\Olc\DataObjects;
 
-use Illuminate\Support\Collection;
 use SmartDato\Olc\Contracts\DataObject;
 
 class ShipmentObject implements DataObject
@@ -23,7 +22,8 @@ class ShipmentObject implements DataObject
         public ?AddressObject $billingAddress = null,
         public ?CashOnDeliveryObject $cashOnDelivery = null,
         public ?float $insurance = null,
-        public ?Collection $content = null,
+        /** @var array<mixed>|null */
+        public ?array $content = null,
         public ?CarrierObject $carrierObject = null,
     ) {}
 
