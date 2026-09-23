@@ -77,7 +77,7 @@ $data = $olc->createShipment($shipment);
 
 `shipmentType` and `shippingService` must be keys configured for your OLC account; `PARCEL` and `EC` are the values used in the tests.
 
-`ShipmentObject` also accepts `reference_2`, `comment`, `products` (`ProductObject` — delivery options such as `b2cDelivery` or `scheduledDelivery`), `cashOnDelivery` (`CashOnDeliveryObject`) and `carrierObject` (`CarrierObject`). Null values are left out of the request.
+`ShipmentObject` also accepts `reference_2`, `comment`, `products` (`ProductObject` — delivery options such as `b2cDelivery` or `scheduledDelivery`), `cashOnDelivery` (`CashOnDeliveryObject`), `insurance` (amount) and `carrierObject` (`CarrierObject`). Null values are left out of the request.
 
 `content` is optional and describes the goods, e.g. for customs. Each `ContentObject` maps to one item; every field is optional and only the ones you set are sent. `invoiceDate`, `invoiceNumber` and `invoiceImage` are grouped into an `invoice` object.
 
