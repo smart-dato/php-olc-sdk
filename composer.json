@@ -15,7 +15,7 @@
         }
     ],
     "require": {
-        "php": "^8.4|^8.5",
+        "php": "^8.4",
         "saloonphp/saloon": "^4.0"
     },
     "require-dev": {
